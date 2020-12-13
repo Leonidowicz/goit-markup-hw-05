@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студия</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -51,7 +54,15 @@
       <section class="hero back">
         <div class="container">
           <h1>Эффективные решения<br />для вашего бизнеса</h1>
-          <button type="button">Заказать услугу</button>
+          <button type="button" data-modal-open>Заказать услугу</button>
+        </div>
+
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <svg class="closed" data-modal-close>
+              <use href="./images/svg/symbol-defs.svg#close"></use>
+            </svg>
+          </div>
         </div>
       </section>
 
@@ -72,14 +83,18 @@
               <use href="./images/svg/symbol-defs.svg#clock"></use>
             </svg>
             <h3>Пунктуальность</h3>
-            <p>Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+            <p>
+              Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+            </p>
           </li>
           <li>
             <svg class="diagram advantages-icon">
               <use href="./images/svg/symbol-defs.svg#diagram"></use>
             </svg>
             <h3>Планирование</h3>
-            <p>Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+            <p>
+              Равным образом консультация с широким активом в значительной степени обуславливает.
+            </p>
           </li>
           <li>
             <svg class="astronaut advantages-icon">
@@ -95,14 +110,23 @@
 
       <section class="working-moments container">
         <h2>Чем мы занимаемся</h2>
-        <ul>
-          <li>
+        <ul class="working-moments-items">
+          <li class="working-moments-item">
             <img width="370" src="images/img_01.jpg" alt="Человек набирает код на клавиатуре" />
+            <p class="working-moments-item-description">Десктопные приложения</p>
           </li>
-          <li>
-            <img width="370" src="images/img_02.jpg" alt="Разработка пользовательского интерфейса" />
+          <li class="working-moments-item">
+            <img
+              width="370"
+              src="images/img_02.jpg"
+              alt="Разработка пользовательского интерфейса"
+            />
+            <p class="working-moments-item-description">Мобильные приложения</p>
           </li>
-          <li><img width="370" src="images/img_03.jpg" alt="Выбор цвета из палитры" /></li>
+          <li class="working-moments-item">
+            <img width="370" src="images/img_03.jpg" alt="Выбор цвета из палитры" />
+            <p class="working-moments-item-description">Дизайнерские решения</p>
+          </li>
         </ul>
       </section>
 
@@ -113,7 +137,11 @@
           <h2>Наша команда</h2>
           <ul class="cards-team">
             <li class="card-team">
-              <img width="270" src="images/product_designer.jpg" alt="Игорь Демьяненко Product Designer" />
+              <img
+                width="270"
+                src="images/product_designer.jpg"
+                alt="Игорь Демьяненко Product Designer"
+              />
               <h3>Игорь Демьяненко</h3>
               <p>Product Designer</p>
               <ul class="social-links">
@@ -144,7 +172,11 @@
               </ul>
             </li>
             <li class="card-team">
-              <img width="270" src="images/frontend_developer.jpg" alt="Ольга Репина Frontend Developer" />
+              <img
+                width="270"
+                src="images/frontend_developer.jpg"
+                alt="Ольга Репина Frontend Developer"
+              />
               <h3>Ольга Репина</h3>
               <p>Frontend Developer</p>
               <ul class="social-links">
@@ -321,5 +353,6 @@
         <div></div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
